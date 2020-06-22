@@ -1,26 +1,34 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import './App.css'
+import { buildReplyText } from 'line-message-builder'
 
-function App() {
+const App: React.FC = () => {
+  const getEmail = () => {
+    liff.init({ liffId: process.env.REACT_APP_LIFF_ID as string }).then(() => {
+      const accessToken = liff.getAccessToken();
+      if (accessToken) {
+        /*
+        fetch(`https://api.line.me/oauth2/v2.1/verify?access_token=${accessToken}`,
+          {
+            headers: {
+              "Content-Type": "application/json",
+              Authorization: `Bearer ${accessToken}`
+            }
+          }
+        )
+        */
+        const idToken = liff.getDecodedIDToken();
+        console.log(idToken)
+      }
+    })
+  }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <button className="button" onClick={getEmail}>
+        Send Message
+      </button>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
