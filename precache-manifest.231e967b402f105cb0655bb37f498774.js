@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "77e19d82b64feaf7fdcae0e7522551e9",
+    "revision": "7ec109c76207c3618407a849561b9c23",
     "url": "/react-liff/index.html"
   },
   {
-    "revision": "dc5ad20843e07ff394bd",
+    "revision": "d1ed74cd14f11c9008d0",
     "url": "/react-liff/static/css/main.5f361e03.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/react-liff/static/js/2.78b471bb.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "dc5ad20843e07ff394bd",
-    "url": "/react-liff/static/js/main.2d8e6536.chunk.js"
+    "revision": "d1ed74cd14f11c9008d0",
+    "url": "/react-liff/static/js/main.c0ae64f4.chunk.js"
   },
   {
     "revision": "ec70ef7681ab3704a31d",
